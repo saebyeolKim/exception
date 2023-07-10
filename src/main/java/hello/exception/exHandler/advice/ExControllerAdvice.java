@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @Slf4j
-@RestControllerAdvice //여러 컨트롤러에서 발생한 오류를 처리해주는 어노테이션
+@RestControllerAdvice(basePackages = "hello.exception.api") //여러 컨트롤러에서 발생한 오류를 처리해주는 어노테이션
 public class ExControllerAdvice {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
